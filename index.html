@@ -1,132 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMKPU(1) Ecobrick</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-            background: linear-gradient(to right, #e8f5e9, #d0f0c0);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-            color: #2e4d2b;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMKPU(1) Ecobrick</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #d0f0c0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #2e4d2b;
+    }
 
-        h1 {
-            font-size: 2.8em;
-            color: #2e7d32;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
+    h1 {
+      font-size: 2.8em;
+      color: #2e7d32;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
 
-        .button-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 700px;
-            margin-bottom: 40px;
-        }
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
 
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 45%;
-            min-width: 200px;
-            padding: 15px 25px;
-            font-size: 16px;
-            font-weight: 700;
-            color: #fff;
-            background: linear-gradient(135deg, #66bb6a, #43a047);
-            border: none;
-            border-radius: 40px;
-            cursor: pointer;
-            box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3);
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 45%;
+      min-width: 200px;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #66bb6a, #43a047);
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
 
-        .btn:hover {
-            background: linear-gradient(135deg, #388e3c, #2e7d32);
-            transform: translateY(-2px);
-        }
+    .btn:hover {
+      background: linear-gradient(135deg, #388e3c, #2e7d32);
+      transform: translateY(-2px);
+    }
 
-        .content {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 30px;
-            margin-top: 10px;
-            width: 100%;
-            max-width: 800px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
+    .content {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
 
-        .content p {
-            text-align: center;
-        }
+    .content p {
+      text-align: center;
+    }
 
-        iframe, img, video {
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+    iframe, img, video {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        @media (max-width: 600px) {
-            .btn {
-                flex: 1 1 100%;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .btn {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>🌱 ECOBRICK</h1>
+  <h1>🌱 ECOBRICK</h1>
 
-    <div class="button-grid">
-        <button class="btn" onclick="showContent('pamphlet')">📄 View Pamphlet</button>
-        <button class="btn" onclick="showContent('activity')">🌿 View Activity Book</button>
-        <button class="btn" onclick="showContent('bunting')">🍀 View Bunting</button>
-        <button class="btn" onclick="showContent('layout')">🌍 View Layout</button>
-        <button class="btn" onclick="showContent('video')">🎥 Watch Montaj Video</button>       
-    </div>
+  <div class="button-grid">
+    <button class="btn" onclick="showContent('pamphlet')">📄 Pamphlet</button>
+    <button class="btn" onclick="showContent('activity')">🌿 Activity Book</button>
+    <button class="btn" onclick="showContent('bunting')">🍀 Bunting</button>
+    <button class="btn" onclick="showContent('layout')">🌍 Layout</button>
+    <button class="btn" onclick="showContent('video')">🎥 Watch Montaj Video</button>       
+  </div>
 
-    <div class="content" id="contentArea">
-        <p>Select an item to view.</p>
-    </div>
+  <div class="content" id="contentArea">
+    <p>Select an item to view.</p>
+  </div>
 
-    <script>
-        function showContent(type) {
-            let content = "";
-            switch(type) {
-                case 'pamphlet':
-                    content = `<iframe src="https://drive.google.com/file/d/1G4KgX1818L35T0AwZRj2TSSf-6KTE3nL/preview" width="100%" height="600px" allow="autoplay"></iframe>`;
-                    break;
-                case 'activity':
-                    content = `<iframe src="https://docs.google.com/gview?url=https://drive.google.com/uc?export=download&id=1WtA0yl0TbQ25WU3677RO_3mw3o0c8G61&embedded=true" width="100%" height="600px" frameborder="0"></iframe>`;
-                    break;
-                case 'bunting':
-                    content = `<iframe src="https://docs.google.com/gview?url=https://drive.google.com/uc?export=download&id=10dZoNMOCcSeeXdWhhmcwA8jO1EPh4puw&embedded=true" width="100%" height="600px" frameborder="0"></iframe>`;
-                    break;
-                case 'layout':
-                    content = `<iframe src="https://docs.google.com/gview?url=https://drive.google.com/uc?export=download&id=1RA0c7cIOGpvNPdTEOOrlTc7FZLhHhrrf&embedded=true" width="100%" height="600px" frameborder="0"></iframe>`;
-                    break;
-                case 'video':
-                    content = `<video controls width="100%">
-                                 <source src="montaj.mp4" type="video/mp4">
-                                 Your browser does not support the video tag.
-                               </video>`;
-                    break;
-                default:
-                    content = `<p>Select an item to view.</p>`;
-            }
-            document.getElementById('contentArea').innerHTML = content;
-        }
-    </script>
+  <script>
+    function showContent(type) {
+      let content = "";
+      switch(type) {
+        case 'pamphlet':
+          content = `<iframe src="https://drive.google.com/file/d/1G4KgX1818L35T0AwZRj2TSSf-6KTE3nL/preview" width="100%" height="600px" allow="autoplay"></iframe>`;
+          break;
+        case 'activity':
+          content = `<iframe src="https://drive.google.com/file/d/1WtA0yl0TbQ25WU3677RO_3mw3o0c8G61/preview" width="100%" height="600px" allow="autoplay"></iframe>`;
+          break;
+        case 'bunting':
+          content = `<iframe src="https://drive.google.com/file/d/10dZoNMOCcSeeXdWhhmcwA8jO1EPh4puw/preview" width="100%" height="600px" allow="autoplay"></iframe>`;
+          break;
+        case 'layout':
+          content = `<iframe src="https://drive.google.com/file/d/1RA0c7cIOGpvNPdTEOOrlTc7FZLhHhrrf/preview" width="100%" height="600px" allow="autoplay"></iframe>`;
+          break;
+        case 'video':
+          content = `<video controls width="100%">
+                      <source src="montaj.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>`;
+          break;
+        default:
+          content = `<p>Select an item to view.</p>`;
+      }
+      document.getElementById('contentArea').innerHTML = content;
+    }
+  </script>
 
 </body>
 </html>
