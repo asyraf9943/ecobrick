@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Display App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            margin-top: 30px;
+        }
+        iframe, img, video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ECOBRICK</h1>
+
+    <a class="btn" onclick="showContent('pamphlet')">View Pamphlet</a>
+    <a class="btn" onclick="showContent('activity')">View Activity Book</a>
+    <a class="btn" onclick="showContent('bunting')">View Bunting</a>
+    <a class="btn" onclick="showContent('video')">Watch Montaj Video</a>
+
+    <div class="content" id="contentArea">
+        <p>Select an item to view.</p>
+    </div>
+
+    <script>
+        function showContent(type) {
+            let content = "";
+            switch(type) {
+                case 'pamphlet':
+                    content = `<iframe src="pamphlet.pdf" width="100%" height="500px"></iframe>`;
+                    break;
+                case 'activity':
+                    content = `<iframe src="activity-book.pdf" width="100%" height="500px"></iframe>`;
+                    break;
+                case 'bunting':
+                    content = `<img src="bunting.jpg" alt="Bunting">`;
+                    break;
+                case 'video':
+                    content = `<video controls>
+                                <source src="montaj.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                               </video>`;
+                    // Or use YouTube: 
+                    // content = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>`;
+                    break;
+            }
+            document.getElementById('contentArea').innerHTML = content;
+        }
+    </script>
+
+</body>
+</html>
