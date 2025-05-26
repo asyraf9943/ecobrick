@@ -97,32 +97,29 @@
 
     <script>
         function showContent(type) {
-            let content = "";
-            switch(type) {
-                case 'pamphlet':
-                    content = `<iframe src="https://drive.google.com/file/d/1G4KgX1818L35T0AwZRj2TSSf-6KTE3nL/view?usp=drive_link" style="width:100%; height:600px;" frameborder="0"></iframe>
-`;
-                    break;
-                case 'activity':
-                    content = `<iframe src="https://drive.google.com/file/d/1WtA0yl0TbQ25WU3677RO_3mw3o0c8G61/view?usp=drive_link" style="width:100%; height:600px;" frameborder="0"></iframe>
-`;
-                    break;
-                case 'bunting':
-                    content = `<iframe src="https://drive.google.com/file/d/10dZoNMOCcSeeXdWhhmcwA8jO1EPh4puw/view?usp=drive_link" style="width:100%; height:600px;" frameborder="0"></iframe>
-`;
-                    break;
-		case 'layout':
-                    content = `<iframe src="https://drive.google.com/file/d/1RA0c7cIOGpvNPdTEOOrlTc7FZLhHhrrf/view?usp=drive_link" style="width:100%; height:600px;" frameborder="0"></iframe>`;
-                    break;
-                case 'video':
-                    content = `<video controls>
-                                <source src="montaj.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                               </video>`;
-                    break;                
-            }
-            document.getElementById('contentArea').innerHTML = content;
-        }
+	    let content = "";
+	    switch(type) {
+	        case 'pamphlet':
+	            window.open('images/pamphlet.pdf', '_blank');
+	            return;
+	        case 'activity':
+	            window.open('images/book.pdf', '_blank');
+	            return;
+	        case 'bunting':
+	            content = `<img src="images/bunting.jpg" alt="Bunting">`;
+	            break;
+	        case 'layout':
+	            window.open('images/layout.pdf', '_blank');
+	            return;
+	        case 'video':
+	            content = `<video controls>
+	                        <source src="montaj.mp4" type="video/mp4">
+	                        Your browser does not support the video tag.
+	                       </video>`;
+	            break;
+	    }
+	    document.getElementById('contentArea').innerHTML = content;
+	}
     </script>
 
 </body>
